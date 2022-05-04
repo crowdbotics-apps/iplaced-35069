@@ -24,11 +24,19 @@ class User(AbstractUser):
         max_length=255,
     )
     email = models.EmailField(
+        null=True,
+        blank=True,
         max_length=254,
+    )
+    profile_img = models.URLField(
         null=True,
         blank=True,
     )
-    profile_img = models.URLField(
+    password = models.TextField(
+        null=True,
+        blank=True,
+    )
+    isloggedin = models.BooleanField(
         null=True,
         blank=True,
     )
